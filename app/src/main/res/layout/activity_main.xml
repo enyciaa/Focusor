@@ -7,6 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     >
+    
+    <!-- Must be the 1st child -->
+    <View
+        android:id="@+id/focusableView"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        >
+        <requestFocus/>
+    </View>
 
     <EditText
         android:layout_width="wrap_content"
